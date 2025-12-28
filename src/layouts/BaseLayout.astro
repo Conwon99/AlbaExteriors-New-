@@ -1,0 +1,205 @@
+---
+import { Header } from "@/sections/Header";
+import { Footer } from "@/sections/Footer";
+import { CallButton } from "@/components/CallButton";
+import "../tailwind.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+}
+
+const { title, description = "Alba Exteriors - Professional exterior cleaning services in Paisley, Glasgow, Edinburgh, Central Belt, Highlands, and Argyll and Bute, Scotland. Roof cleaning, pressure washing, soft washing, and more. Fully insured, expert service.", breadcrumbs } = Astro.props;
+
+// Generate canonical URL (non-www)
+const canonicalUrl = new URL(Astro.url.pathname, "https://albaexteriors.co.uk");
+const canonical = canonicalUrl.toString();
+
+// Organization JSON-LD Schema for logo in SERP
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Alba Exteriors",
+  "url": "https://albaexteriors.co.uk",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://albaexteriors.co.uk/alba-logo.png",
+    "width": 600,
+    "height": 200
+  },
+  "image": "https://albaexteriors.co.uk/alba-logo.png",
+  "telephone": "+447368665616",
+  "email": "albaexteriors80@outlook.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paisley",
+    "addressRegion": "Scotland",
+    "addressCountry": "GB"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "24",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/albaexteriors",
+    "https://www.google.com/maps?cid=YOUR_GOOGLE_BUSINESS_ID"
+  ]
+};
+
+// ProfessionalService JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Alba Exteriors",
+  "provider": {
+    "@type": "Organization",
+    "name": "Alba Exteriors",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://albaexteriors.co.uk/alba-logo.png",
+      "width": 600,
+      "height": 200
+    }
+  },
+  "telephone": "+447368665616",
+  "email": "albaexteriors80@outlook.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paisley",
+    "addressRegion": "Scotland",
+    "addressCountry": "GB"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "24",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paisley"
+    },
+    {
+      "@type": "City",
+      "name": "Glasgow"
+    },
+    {
+      "@type": "City",
+      "name": "Edinburgh"
+    },
+    {
+      "@type": "Place",
+      "name": "Central Belt"
+    },
+    {
+      "@type": "Place",
+      "name": "Highlands"
+    },
+    {
+      "@type": "Place",
+      "name": "Argyll and Bute"
+    }
+  ],
+  "serviceType": [
+    "Roof Cleaning",
+    "Driveway Cleaning",
+    "Patio Cleaning",
+    "Soft Washing",
+    "Pressure Washing",
+    "Gutter Cleaning",
+    "uPVC Cleaning",
+    "Conservatory Cleaning",
+    "Brick Cleaning"
+  ],
+  "url": "https://albaexteriors.co.uk"
+};
+
+// Generate full URL for current page
+const fullUrl = new URL(Astro.url.pathname, "https://albaexteriors.co.uk");
+const ogImage = "https://albaexteriors.co.uk/alba-logo.png";
+
+// BreadcrumbList JSON-LD Schema (if breadcrumbs provided)
+let breadcrumbSchema = null;
+if (breadcrumbs && breadcrumbs.length > 0) {
+  breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": `https://albaexteriors.co.uk${crumb.url}`
+    }))
+  };
+}
+---
+
+<!doctype html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" href="/alba-logo.png" />
+    <link rel="apple-touch-icon" href="/alba-logo.png" />
+    
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullUrl.toString()} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Alba Exteriors" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={fullUrl.toString()} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C39RC6DXXL"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C39RC6DXXL');
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    <style>
+      * {
+        max-width: 100%;
+      }
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="text-black text-sm not-italic normal-nums font-normal accent-auto bg-zinc-100 box-border caret-transparent block tracking-[normal] leading-[20.3px] list-outside list-disc break-words overflow-x-hidden overflow-y-auto pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-figtree md:text-[17px] md:leading-[24.65px]">
+    <Header client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer client:load />
+    <CallButton client:load />
+  </body>
+</html>
+
+

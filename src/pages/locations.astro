@@ -1,0 +1,185 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ContactFormSection } from '@/sections/ContactFormSection';
+---
+
+<BaseLayout 
+  title="Service Areas | Alba Exteriors | Paisley, Glasgow, Edinburgh, Central Belt, Highlands & Argyll and Bute"
+  description="Alba Exteriors provides professional exterior cleaning services in Paisley, Glasgow, Edinburgh, Central Belt, Highlands, and Argyll and Bute. Contact us today."
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Locations", url: "/locations" }
+  ]}
+>
+  <div
+    role="main"
+    class="text-sm bg-white box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]"
+  >
+    <!-- Hero Section -->
+    <div class="relative text-sm box-border caret-transparent flex items-center justify-center leading-[20.3px] break-words h-[400px] md:text-[17px] md:h-[500px] md:leading-[24.65px] overflow-hidden">
+      <div
+        class="absolute inset-0 bg-no-repeat bg-cover bg-center"
+        style={`background-image: url('${encodeURI("/services/pressurewashing.png")}');`}
+      />
+      <div class="absolute inset-0 bg-black/50" />
+      <div class="relative text-sm box-border caret-transparent z-10 leading-[20.3px] break-words text-center md:text-[17px] md:leading-[24.65px]">
+        <h1 class="text-white text-4xl font-bold box-border caret-transparent leading-[50px] break-words uppercase font-thiccboi md:text-6xl md:leading-[70px] drop-shadow-lg">
+          Our Service Areas
+        </h1>
+        <p class="text-white text-xl box-border caret-transparent leading-[28px] break-words mt-4 md:text-2xl md:leading-[32px] drop-shadow-lg">
+          Professional Exterior Cleaning Throughout Paisley, Glasgow, Edinburgh, Central Belt, Highlands & Argyll and Bute
+        </p>
+      </div>
+    </div>
+
+    <!-- Locations Content Section -->
+    <div class="relative text-sm items-center box-border caret-transparent flex justify-center leading-[20.3px] break-words px-5 py-10 md:text-[17px] md:leading-[24.65px] md:px-5 md:py-16">
+      <div class="text-sm box-border caret-transparent grow leading-[20.3px] max-w-[1300px] break-words mx-auto md:text-[17px] md:leading-[24.65px]">
+        <!-- Introduction -->
+        <div class="text-sm box-border caret-transparent text-center mb-12 leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+          <h2 class="text-neutral-900 text-3xl font-bold box-border caret-transparent leading-[42px] break-words uppercase font-thiccboi mb-4 md:text-4xl md:leading-[50px]">
+            Where We Serve
+          </h2>
+          <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words max-w-3xl mx-auto font-figtree md:text-lg md:leading-7">
+            Alba Exteriors is proud to serve homeowners and businesses throughout Paisley, Glasgow, Edinburgh, the Central Belt, Highlands, and Argyll and Bute. Our professional exterior cleaning services are available across a wide range of locations in Scotland, ensuring you can access our expert services no matter where you're located.
+          </p>
+        </div>
+
+        <!-- Main Service Areas -->
+        <div class="text-sm box-border caret-transparent grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+          <!-- Paisley -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Paisley
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Based in Paisley, we provide comprehensive exterior cleaning services throughout the town and surrounding areas. From roof cleaning to pressure washing, we're your local experts.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>Roof Cleaning</li>
+              <li>Driveway Cleaning</li>
+              <li>Patio Cleaning</li>
+              <li>Soft Washing</li>
+              <li>Gutter Cleaning</li>
+            </ul>
+          </div>
+
+          <!-- Glasgow -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Glasgow
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Serving Glasgow and surrounding areas with professional exterior cleaning services. Our team regularly travels to Glasgow to provide expert cleaning solutions.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>Pressure Washing</li>
+              <li>uPVC Cleaning</li>
+              <li>Conservatory Cleaning</li>
+              <li>Commercial Cleaning</li>
+              <li>Residential Services</li>
+            </ul>
+          </div>
+
+          <!-- Edinburgh -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Edinburgh
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Professional exterior cleaning services available in Edinburgh. We provide reliable, high-quality cleaning solutions for homes and businesses throughout Scotland's capital.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>All Exterior Cleaning Services</li>
+              <li>Heritage Property Care</li>
+              <li>Commercial & Residential</li>
+            </ul>
+          </div>
+
+          <!-- Central Belt -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Central Belt
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Serving the Central Belt of Scotland with expert exterior cleaning services. Our team brings professional equipment and techniques to restore your property's appearance.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>Roof & Gutter Cleaning</li>
+              <li>Driveway & Patio Cleaning</li>
+              <li>Soft Washing Services</li>
+            </ul>
+          </div>
+
+          <!-- Highlands -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Highlands
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Professional cleaning services available throughout the Scottish Highlands. We help maintain and restore the exterior appearance of properties in this beautiful region.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>Complete Exterior Cleaning</li>
+              <li>Biocide Treatments</li>
+              <li>Preventative Maintenance</li>
+            </ul>
+          </div>
+
+          <!-- Argyll and Bute -->
+          <div class="bg-white border-2 border-[#17539B]/20 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <h3 class="text-[#17539B] text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-3">
+              Argyll and Bute
+            </h3>
+            <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words font-figtree mb-4">
+              Serving Argyll and Bute with comprehensive exterior cleaning solutions. Our experienced team provides reliable, professional service throughout this scenic region.
+            </p>
+            <ul class="text-neutral-700 text-sm box-border caret-transparent leading-6 break-words space-y-2 font-figtree list-disc list-inside">
+              <li>All Services Available</li>
+              <li>Coastal Property Care</li>
+              <li>Regular Service Contracts</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Areas -->
+        <div class="text-sm box-border caret-transparent bg-cyan-50 rounded-lg p-8 mb-12 leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+          <h3 class="text-cyan-600 text-2xl font-bold box-border caret-transparent leading-8 break-words uppercase font-thiccboi mb-4 text-center">
+            Comprehensive Coverage
+          </h3>
+          <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words text-center font-figtree mb-6 md:text-lg md:leading-7">
+            Our service coverage extends across major areas including Paisley, Glasgow, Edinburgh, the Central Belt, Highlands, and Argyll and Bute. We're committed to bringing professional exterior cleaning services to properties throughout Scotland.
+          </p>
+          <p class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words text-center font-figtree mt-6 md:text-lg md:leading-7">
+            Don't see your specific area listed? <a href="/contact" class="text-cyan-600 font-semibold hover:text-cyan-700 underline">Contact us</a> to find out if we can serve your location.
+          </p>
+        </div>
+
+        <!-- Why Choose Local Service -->
+        <div class="text-sm box-border caret-transparent mb-12 leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+          <h2 class="text-neutral-900 text-3xl font-bold box-border caret-transparent leading-[42px] break-words uppercase font-thiccboi mb-6 text-center md:text-4xl md:leading-[50px]">
+            Why Choose a Local Service?
+          </h2>
+          <div class="text-neutral-700 text-base box-border caret-transparent leading-6 break-words space-y-4 font-figtree md:text-lg md:leading-7 max-w-4xl mx-auto">
+            <p>
+              As a Scotland-based company, we understand the unique challenges of maintaining properties across different regions - from the urban areas of Glasgow and Edinburgh to the coastal regions of Argyll and Bute and the rugged Highlands. From heavy rainfall to moss growth, we're equipped with the knowledge and experience to handle the specific needs of properties throughout our extensive service areas.
+            </p>
+            <p>
+              Our local presence means we can respond quickly to your needs, provide personalized service, and understand the local regulations and requirements. We're committed to building long-term relationships with our customers and supporting the local community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <div class="relative text-sm items-center box-border caret-transparent flex justify-center leading-[20.3px] break-words px-5 py-10 bg-neutral-50 md:text-[17px] md:leading-[24.65px] md:px-5 md:py-16">
+      <div class="text-sm box-border caret-transparent grow leading-[20.3px] max-w-[800px] break-words mx-auto md:text-[17px] md:leading-[24.65px]">
+        <div id="contact">
+          <ContactFormSection client:load />
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
