@@ -38,7 +38,7 @@ export const DifferentiatorSection = () => {
                   <div
                     className="text-sm bg-no-repeat bg-cover bg-center box-border caret-transparent block leading-[20.3px] break-words w-full h-[300px] rounded-lg shadow-lg md:text-[17px] md:h-[400px] md:leading-[24.65px]"
                     style={{
-                      backgroundImage: `url('${encodeURI("/about.jpg")}')`,
+                      backgroundImage: `url('${encodeURI("/pressurewashing.jpg")}')`,
                     }}
                   />
                 </div>

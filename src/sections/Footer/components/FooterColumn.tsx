@@ -1,3 +1,5 @@
+import { usePhoneNumber } from "@/hooks/usePhoneNumber";
+
 export type FooterColumnProps = {
   title: string;
   variant: string;
@@ -13,9 +15,12 @@ export type FooterColumnProps = {
   hoursContent?: React.ReactNode;
   mapEmbedUrl?: string;
   services?: Array<{ name: string; url: string }>;
+  locations?: Array<{ name: string; url: string }>;
 };
 
 export const FooterColumn = (props: FooterColumnProps) => {
+  const { phoneDisplay, phoneHref } = usePhoneNumber();
+  
   return (
     <div className="relative box-border caret-transparent flex min-h-px w-full md:w-[25%]">
       <div className="relative content-start box-border caret-transparent flex flex-wrap w-full p-2.5">
@@ -78,11 +83,11 @@ export const FooterColumn = (props: FooterColumnProps) => {
                   <span className="box-border caret-transparent">
                     {props.phoneLabel}
                     <a
-                      href={`tel:${props.phone}`}
+                      href={phoneHref}
                       className="text-cyan-500 box-border caret-transparent hover:text-cyan-400"
                     >
                       {" "}
-                      {props.phone}
+                      {phoneDisplay}
                     </a>
                   </span>
                 </p>
@@ -131,6 +136,49 @@ export const FooterColumn = (props: FooterColumnProps) => {
                       className="text-cyan-500 box-border caret-transparent hover:text-cyan-400 transition-colors"
                     >
                       {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {props.locations && props.locations.length > 0 && (
+                <div className="relative box-border caret-transparent mt-6 group">
+                  <a
+                    href="/locations"
+                    className="text-cyan-500 box-border caret-transparent hover:text-cyan-400 transition-colors inline-block"
+                  >
+                    Our Locations
+                  </a>
+                  <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 bg-black/95 rounded-lg shadow-lg min-w-[180px] py-2">
+                    <ul className="list-none p-0 m-0">
+                      {props.locations.map((location, index) => (
+                        <li key={index} className="box-border caret-transparent">
+                          <a
+                            href={location.url}
+                            className="text-cyan-500 box-border caret-transparent hover:text-cyan-400 transition-colors block px-4 py-2 hover:bg-white/10"
+                          >
+                            {location.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {props.variant === "locations" && props.locations && (
+          <div className="relative text-white box-border caret-transparent w-full font-thiccboi">
+            <div className="box-border caret-transparent">
+              <ul className="list-none p-0 m-0">
+                {props.locations.map((location, index) => (
+                  <li key={index} className="box-border caret-transparent mb-3">
+                    <a
+                      href={location.url}
+                      className="text-cyan-500 box-border caret-transparent hover:text-cyan-400 transition-colors"
+                    >
+                      {location.name}
                     </a>
                   </li>
                 ))}

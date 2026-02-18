@@ -1,8 +1,12 @@
+import { usePhoneNumber } from "@/hooks/usePhoneNumber";
+
 export const CallButton = () => {
+  const { phoneDisplay, phoneHref, canonicalPhoneDisplay } = usePhoneNumber();
+  
   return (
     <a
-      aria-label="Call Us: 07368 665616"
-      href="tel://+447368665616"
+      aria-label={`Call Us: ${canonicalPhoneDisplay}`}
+      href={phoneHref}
       className="fixed text-sm bg-black box-border caret-transparent flex items-center gap-4 leading-[20.3px] break-words px-5 py-4 rounded-lg shadow-[rgba(0,0,0,0.3)_0px_3px_6px_0px] z-[2147483647] left-5 bottom-[15px] hover:bg-neutral-900 transition-colors md:text-[17px] md:hidden md:leading-[24.65px]"
     >
       {/* Circular Icon with Phone */}
@@ -29,7 +33,7 @@ export const CallButton = () => {
           Call Us Now
         </span>
         <span className="text-neutral-300 text-xl box-border caret-transparent leading-[28px] break-words font-bold md:text-[17px] md:leading-[24.65px]">
-          07368 665616
+          {phoneDisplay}
         </span>
       </div>
     </a>

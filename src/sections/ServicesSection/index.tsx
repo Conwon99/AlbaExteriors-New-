@@ -9,7 +9,7 @@ export const ServicesSection = () => {
           {/* Title and Description Section */}
           <div className="text-sm box-border caret-transparent flex flex-col items-center text-center leading-[20.3px] break-words mb-8 md:text-[17px] md:leading-[24.65px] md:mb-12">
             <h2 className="text-neutral-900 text-3xl font-bold box-border caret-transparent clear-both leading-[40px] break-words font-thiccboi mb-4 md:text-5xl md:leading-[60px]">
-              Paisley and Glasgow <span className="text-[#17539B]">Exterior Cleaning</span> Expert Friendly Service
+              <span className="text-[#17539B]">Exterior Cleaning</span> Expert Friendly Service Across Scotland
             </h2>
             <div className="relative box-border caret-transparent w-full mb-4">
               <div className="box-border caret-transparent -my-3">
@@ -19,7 +19,7 @@ export const ServicesSection = () => {
               </div>
             </div>
             <p className="text-neutral-700 text-base box-border caret-transparent leading-[24px] break-words max-w-4xl mx-auto font-figtree md:text-lg md:leading-[26px]">
-              At Alba Exteriors, we provide professional exterior cleaning services throughout Paisley and Glasgow. Our expert team is dedicated to delivering friendly, reliable service that transforms your property's appearance. We specialize in roof cleaning, pressure washing, soft washing, gutter cleaning, and more. With years of experience and a commitment to quality, we ensure your property looks its best while maintaining the highest standards of customer care. Trust Alba Exteriors for all your exterior cleaning needs.
+              At Alba Exteriors, we provide professional exterior cleaning services across Scotland. Our expert team is dedicated to delivering friendly, reliable service that transforms your property's appearance. We specialize in roof cleaning, pressure washing, soft washing, gutter cleaning, and more. With years of experience and a commitment to quality, we ensure your property looks its best while maintaining the highest standards of customer care. Trust Alba Exteriors for all your exterior cleaning needs.
             </p>
           </div>
           

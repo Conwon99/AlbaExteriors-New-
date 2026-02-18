@@ -1,4 +1,8 @@
+import { usePhoneNumber } from "@/hooks/usePhoneNumber";
+
 export const FooterContactInfo = () => {
+  const { phoneDisplay, phoneHref, phoneNumber } = usePhoneNumber();
+  
   return (
     <div className="text-sm box-border caret-transparent clear-both flex grow float-none leading-[20.3px] min-h-px min-w-0 break-words w-auto mx-auto md:text-[17px] md:clear-none md:float-left md:leading-[24.65px] md:min-w-[auto] md:w-[68%] md:mx-0">
       <div className="text-sm box-border caret-transparent flex flex-col grow justify-center leading-[20.3px] max-w-full min-w-px break-words w-full md:text-[17px] md:leading-[24.65px]">
@@ -26,10 +30,10 @@ export const FooterContactInfo = () => {
                         <span className="text-black text-sm box-border caret-transparent leading-[20.3px] break-words text-center md:text-[17px] md:leading-[24.65px] md:text-left">
                           P -{" "}
                           <a
-                            href="tel://+447368665616"
+                            href={phoneHref}
                             className="text-sm box-border caret-transparent leading-[20.3px] break-words text-center md:text-[17px] md:leading-[24.65px] md:text-left"
                           >
-                            07368 665616
+                            {phoneDisplay}
                           </a>
                         </span>
                         <br className="text-sm box-border caret-transparent leading-[20.3px] break-words text-center md:text-[17px] md:leading-[24.65px] md:text-left" />
@@ -67,8 +71,8 @@ export const FooterContactInfo = () => {
                 </div>
               </a>
               <a
-                href="https://wa.me/+447368665616"
-                aria-label="Go to https://wa.me/+447368665616"
+                href={`https://wa.me/${phoneNumber}`}
+                aria-label={`Go to https://wa.me/${phoneNumber}`}
                 className="text-zinc-500 text-sm box-border caret-transparent inline-block leading-[20.3px] break-words text-center align-top mr-5 mb-5 md:text-[17px] md:leading-[24.65px] md:text-left"
               >
                 <div className="text-sm box-border caret-transparent leading-[20.3px] break-words text-center md:text-[17px] md:leading-[24.65px] md:text-left">

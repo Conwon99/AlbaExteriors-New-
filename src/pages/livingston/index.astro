@@ -1,0 +1,75 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { LivingstonHero } from '@/sections/Hero/components/LivingstonHero';
+import { FeatureRow } from '@/sections/FeatureRow';
+import { LivingstonServiceIntro } from '@/sections/ServiceIntro/components/LivingstonServiceIntro';
+import { WelcomeSection } from '@/sections/WelcomeSection';
+import { LivingstonServicesSection } from '@/sections/ServicesSection/components/LivingstonServicesSection';
+import { RoofCleaningBeforeAfter } from '@/sections/BeforeAfterSection/RoofCleaningBeforeAfter';
+import { DifferentiatorSection } from '@/sections/DifferentiatorSection';
+import { ReviewsSection } from '@/sections/ReviewsSection';
+import { ContactFormSection } from '@/sections/ContactFormSection';
+import { CTASection } from '@/sections/CTASection';
+import { SectionTransition } from '@/components/SectionTransition';
+import { LivingstonContentSection } from '@/sections/LivingstonContentSection';
+import { LocationContext } from '@/components/LocationContext';
+---
+
+<BaseLayout 
+  title="Exterior Cleaning Livingston | Roof Cleaning, Pressure Washing & More | Alba Exteriors"
+  description="Looking for exterior cleaning in Livingston? We do roof cleaning, pressure washing, soft washing, and gutter cleaning. Serving Livingston Village, Craigshill, and surrounding areas. Free quotes, fully insured."
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Locations", url: "/locations" },
+    { name: "Livingston", url: "/livingston" }
+  ]}
+  locationName="Livingston"
+>
+  <div class="text-sm box-border caret-transparent content-['768'] hidden leading-[20.3px] break-words md:text-[17px] md:content-['default'] md:leading-[24.65px]"></div>
+  <div
+    role="main"
+    class="text-sm bg-white box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]"
+  >
+    <div class="text-sm box-border caret-transparent leading-[20.3px] min-h-full break-words md:text-[17px] md:leading-[24.65px] before:accent-auto before:box-border before:caret-transparent before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[20.3px] before:list-outside before:list-disc before:break-words before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-figtree before:md:text-[17px] before:md:leading-[24.65px] after:accent-auto after:box-border after:caret-transparent after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[20.3px] after:list-outside after:list-disc after:break-words after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-figtree after:md:text-[17px] after:md:leading-[24.65px]">
+      <div class="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px] before:accent-auto before:box-border before:caret-transparent before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[20.3px] before:list-outside before:list-disc before:break-words before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-figtree before:md:text-[17px] before:md:leading-[24.65px] after:accent-auto after:box-border after:caret-transparent after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[20.3px] after:list-outside after:list-disc after:break-words after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-figtree after:md:text-[17px] after:md:leading-[24.65px]">
+        <div class="relative text-sm box-border caret-transparent float-none leading-[20.3px] min-h-px break-words w-auto md:text-[17px] md:float-left md:leading-[24.65px] md:w-full">
+          <article class="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+            <div class="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px] before:accent-auto before:box-border before:caret-transparent before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[20.3px] before:list-outside before:list-disc before:break-words before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-figtree before:md:text-[17px] before:md:leading-[24.65px] after:accent-auto after:box-border after:caret-transparent after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[20.3px] after:list-outside after:list-disc after:break-words after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-figtree after:md:text-[17px] after:md:leading-[24.65px]">
+              <div class="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
+                <div class="relative text-sm box-border caret-transparent leading-[20.3px] break-words mx-auto md:text-[17px] md:leading-[24.65px] before:accent-auto before:box-border before:caret-transparent before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[20.3px] before:list-outside before:list-disc before:break-words before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-figtree before:md:text-[17px] before:md:leading-[24.65px] after:accent-auto after:box-border after:caret-transparent after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[20.3px] after:list-outside after:list-disc after:break-words after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-figtree after:md:text-[17px] after:md:leading-[24.65px]">
+                  <LivingstonHero client:load />
+                </div>
+                <FeatureRow client:load />
+                <LivingstonServiceIntro client:load />
+                <SectionTransition client:load />
+                <WelcomeSection client:load />
+                <LivingstonServicesSection client:load />
+                <RoofCleaningBeforeAfter client:load />
+                <DifferentiatorSection client:load />
+                <ReviewsSection client:load />
+                <LivingstonContentSection client:load />
+                <LocationContext 
+                  client:load
+                  locationName="Livingston"
+                  population="Scotland's largest new town with over 56,000 residents"
+                  context="At Alba Exteriors, we provide professional exterior cleaning services throughout Livingston and surrounding areas."
+                  neighborhoods={['Livingston Village', 'Craigshill', 'Dedridge', 'Eliburn', 'Howden', 'Ladywell', 'Knightsridge']}
+                  transportLinks={['M8 motorway', 'M9 motorway', 'A71', 'A705', 'Livingston North Railway Station', 'Livingston South Railway Station']}
+                  propertyTypes={['new town estates from the 1960s-1980s', 'modern developments', 'commercial properties', 'retail areas']}
+                  landmarks={['The Centre Livingston', 'Almondvale Stadium', 'Livingston Designer Outlet', 'Dechmont Law']}
+                  weatherNote="Livingston experiences moderate annual rainfall (900-1,000mm) with occasional freeze-thaw cycles and variable weather patterns."
+                  cleaningNeeds={['moss growth on new town properties', 'gutter blockages from frequent rainfall', 'surface staining on driveways and patios', 'maintenance of commercial facades']}
+                />
+                <div class="text-sm bg-gradient-to-b from-transparent via-[#17539B]/10 to-[#17539B] box-border caret-transparent leading-[20.3px] break-words mx-auto pt-16 pb-0 md:text-[17px] md:leading-[24.65px] md:pt-24 md:pb-0 before:accent-auto before:box-border before:caret-transparent before:text-black before:table before:text-sm before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[20.3px] before:list-outside before:list-disc before:break-words before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-figtree before:md:text-[17px] before:md:leading-[24.65px] after:accent-auto after:box-border after:caret-transparent after:clear-both after:text-black after:table after:text-sm after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[20.3px] after:list-outside after:list-disc after:break-words after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-figtree after:md:text-[17px] after:md:leading-[24.65px]">
+                  <ContactFormSection client:load />
+                </div>
+                <CTASection client:load />
+              </div>
+              <div class="text-sm box-border caret-transparent content-['768'] hidden leading-[20.3px] break-words md:text-[17px] md:content-['default'] md:leading-[24.65px]"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

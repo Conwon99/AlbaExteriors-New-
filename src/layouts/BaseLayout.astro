@@ -8,9 +8,10 @@ interface Props {
   title: string;
   description?: string;
   breadcrumbs?: Array<{ name: string; url: string }>;
+  locationName?: string;
 }
 
-const { title, description = "Alba Exteriors - Professional exterior cleaning services in Paisley, Glasgow, Edinburgh, Central Belt, Highlands, and Argyll and Bute, Scotland. Roof cleaning, pressure washing, soft washing, and more. Fully insured, expert service.", breadcrumbs } = Astro.props;
+const { title, description = "Alba Exteriors - Professional exterior cleaning services in Paisley, Glasgow, Edinburgh, Central Belt, Highlands, and Argyll and Bute, Scotland. Roof cleaning, pressure washing, soft washing, and more. Fully insured, expert service.", breadcrumbs, locationName } = Astro.props;
 
 // Generate canonical URL (non-www)
 const canonicalUrl = new URL(Astro.url.pathname, "https://albaexteriors.co.uk");
@@ -24,12 +25,13 @@ const organizationSchema = {
   "url": "https://albaexteriors.co.uk",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://albaexteriors.co.uk/alba-logo.png",
-    "width": 600,
-    "height": 200
+    "url": "https://albaexteriors.co.uk/alba-logo-square.png",
+    "width": 500,
+    "height": 500,
+    "contentUrl": "https://albaexteriors.co.uk/alba-logo-square.png"
   },
   "image": "https://albaexteriors.co.uk/alba-logo.png",
-  "telephone": "+447368665616",
+  "telephone": "+447375872331",
   "email": "albaexteriors80@outlook.com",
   "address": {
     "@type": "PostalAddress",
@@ -65,7 +67,7 @@ const schema = {
       "height": 200
     }
   },
-  "telephone": "+447368665616",
+  "telephone": "+447375872331",
   "email": "albaexteriors80@outlook.com",
   "address": {
     "@type": "PostalAddress",
@@ -81,30 +83,36 @@ const schema = {
     "worstRating": "1"
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Paisley"
-    },
-    {
-      "@type": "City",
-      "name": "Glasgow"
-    },
-    {
-      "@type": "City",
-      "name": "Edinburgh"
-    },
-    {
-      "@type": "Place",
-      "name": "Central Belt"
-    },
-    {
-      "@type": "Place",
-      "name": "Highlands"
-    },
-    {
-      "@type": "Place",
-      "name": "Argyll and Bute"
-    }
+    { "@type": "City", "name": "Paisley" },
+    { "@type": "City", "name": "East Kilbride" },
+    { "@type": "City", "name": "Hamilton" },
+    { "@type": "City", "name": "Newton Mearns" },
+    { "@type": "City", "name": "Bearsden" },
+    { "@type": "City", "name": "Livingston" },
+    { "@type": "City", "name": "Glasgow" },
+    { "@type": "City", "name": "Edinburgh" },
+    { "@type": "City", "name": "Cumbernauld" },
+    { "@type": "City", "name": "Airdrie" },
+    { "@type": "City", "name": "Motherwell" },
+    { "@type": "City", "name": "Coatbridge" },
+    { "@type": "City", "name": "Bishopbriggs" },
+    { "@type": "City", "name": "Renfrew" },
+    { "@type": "City", "name": "Johnstone" },
+    { "@type": "City", "name": "Kilmarnock" },
+    { "@type": "City", "name": "Irvine" },
+    { "@type": "City", "name": "Kilwinning" },
+    { "@type": "City", "name": "Saltcoats" },
+    { "@type": "City", "name": "Ardrossan" },
+    { "@type": "City", "name": "Stevenston" },
+    { "@type": "City", "name": "Bathgate" },
+    { "@type": "City", "name": "Falkirk" },
+    { "@type": "City", "name": "Grangemouth" },
+    { "@type": "City", "name": "Musselburgh" },
+    { "@type": "City", "name": "Dalkeith" },
+    { "@type": "City", "name": "Bonnyrigg" },
+    { "@type": "Place", "name": "Central Belt" },
+    { "@type": "Place", "name": "Highlands" },
+    { "@type": "Place", "name": "Argyll and Bute" }
   ],
   "serviceType": [
     "Roof Cleaning",
@@ -136,6 +144,81 @@ if (breadcrumbs && breadcrumbs.length > 0) {
       "name": crumb.name,
       "item": `https://albaexteriors.co.uk${crumb.url}`
     }))
+  };
+}
+
+// LocalBusiness JSON-LD Schema (if locationName provided)
+let localBusinessSchema = null;
+if (locationName) {
+  localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `Alba Exteriors - ${locationName}`,
+    "image": "https://albaexteriors.co.uk/alba-logo.png",
+    "telephone": "+447375872331",
+    "email": "albaexteriors80@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": locationName,
+      "addressRegion": "Scotland",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressLocality": locationName,
+      "addressRegion": "Scotland"
+    },
+    "url": `https://albaexteriors.co.uk${Astro.url.pathname}`,
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "24",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": locationName
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Exterior Cleaning Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Roof Cleaning",
+            "description": "Professional roof cleaning service"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pressure Washing",
+            "description": "Professional pressure washing service"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Soft Washing",
+            "description": "Professional soft washing service"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Gutter Cleaning",
+            "description": "Professional gutter cleaning service"
+          }
+        }
+      ]
+    }
   };
 }
 ---
@@ -182,6 +265,32 @@ if (breadcrumbs && breadcrumbs.length > 0) {
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {localBusinessSchema && <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />}
+    <!-- Global phone tracking script -->
+    <script is:inline>
+      (function() {
+        if (typeof window !== 'undefined') {
+          function updatePhoneNumbers() {
+            const links = document.querySelectorAll('.phone-link[data-tracking-href]');
+            links.forEach(function(link) {
+              link.href = link.dataset.trackingHref;
+              const numberSpan = link.querySelector('.phone-number');
+              if (numberSpan) {
+                numberSpan.textContent = link.dataset.trackingDisplay;
+              } else if (link.textContent && link.dataset.trackingDisplay) {
+                // For links without a separate number span (like thank-you page)
+                link.textContent = link.dataset.trackingDisplay;
+              }
+            });
+          }
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updatePhoneNumbers);
+          } else {
+            updatePhoneNumbers();
+          }
+        }
+      })();
+    </script>
     <style>
       * {
         max-width: 100%;

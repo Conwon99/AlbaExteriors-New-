@@ -31,13 +31,21 @@ export const Footer = () => {
                     { name: "uPVC Cleaning", url: "/upvc-cleaning" },
                     { name: "Conservatory Cleaning", url: "/conservatory-cleaning" },
                   ]}
+                  locations={[
+                    { name: "Paisley", url: "/paisley" },
+                    { name: "East Kilbride", url: "/east-kilbride" },
+                    { name: "Hamilton", url: "/hamilton" },
+                    { name: "Newton Mearns", url: "/newton-mearns" },
+                    { name: "Bearsden", url: "/bearsden" },
+                    { name: "Livingston", url: "/livingston" },
+                  ]}
                 />
                 <FooterColumn
                   title="Contact Us"
                   variant="contact-us"
                   email="albaexteriors80@outlook.com"
                   emailLabel="Email Us:"
-                  phone="07368 665616"
+                  phone="07375 872331"
                   phoneLabel="Call Us:"
                   address="Paisley, Scotland"
                   hoursTitle="Hours Of Operation"

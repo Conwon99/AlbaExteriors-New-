@@ -1,4 +1,8 @@
+import { usePhoneNumber } from "@/hooks/usePhoneNumber";
+
 export const ServicesCTA = () => {
+  const { phoneDisplay, phoneHref, canonicalPhoneDisplay } = usePhoneNumber();
+  
   return (
     <div className="relative text-sm items-center box-border caret-transparent flex justify-center leading-[20.3px] break-words px-5 py-10 md:text-[17px] md:leading-[24.65px] md:px-5 md:py-16">
       <div className="text-sm box-border caret-transparent grow leading-[20.3px] max-w-[1300px] break-words mx-auto md:text-[17px] md:leading-[24.65px]">
@@ -11,10 +15,10 @@ export const ServicesCTA = () => {
           </p>
           <div className="text-sm box-border caret-transparent flex flex-col sm:flex-row gap-4 items-center justify-center leading-[20.3px] break-words w-full md:text-[17px] md:leading-[24.65px]">
             <a
-              href="tel:+447368665616"
-              title="Call 07368 665616"
+              href={phoneHref}
+              title={`Call ${canonicalPhoneDisplay}`}
               role="button"
-              aria-label="Call 07368 665616"
+              aria-label={`Call ${canonicalPhoneDisplay}`}
               className="relative text-white text-sm font-semibold items-center box-border caret-transparent inline-flex justify-center tracking-[2px] leading-[18px] max-w-full min-h-[45px] break-words text-center uppercase align-middle px-8 py-3 bg-cyan-600 hover:bg-cyan-700 transition-colors rounded-md md:text-[17px]"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
@@ -40,7 +44,7 @@ export const ServicesCTA = () => {
                 />
               </svg>
               <span className="box-border caret-transparent break-words">
-                CALL 07368 665616
+                CALL {phoneDisplay}
               </span>
             </a>
             <a

@@ -28,7 +28,7 @@ export const HeroContent = () => {
                             </svg>
                           </span> Services
                         </div>
-                        <div className="block">Paisley</div>
+                        <div className="block">Across Scotland</div>
                       </h1>
                     </div>
                   </div>
@@ -42,7 +42,7 @@ export const HeroContent = () => {
                   <div className="relative text-white text-base box-border caret-transparent leading-6 text-center w-full mb-5 font-thiccboi md:text-lg md:leading-7">
                     <div className="text-base box-border caret-transparent leading-6 ml-2.5 mt-2.5 md:text-lg md:leading-7">
                       <p className="text-base box-border caret-transparent leading-6 mb-[14.4px] md:text-lg md:leading-7 max-w-[600px] mx-auto">
-                        Offering the best roof cleaning, pressure washing, softwashing, and gutter cleaning in Paisley, Glasgow, Edinburgh, Central Belt, Highlands & Argyll and Bute
+                        Offering the best roof cleaning, pressure washing, softwashing, and gutter cleaning across Scotland
                       </p>
                     </div>
                   </div>
