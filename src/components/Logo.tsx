@@ -13,9 +13,8 @@ export const Logo = () => {
                   <img
                     src="/alba-logo.png"
                     alt="Alba Exteriors Logo"
-                    sizes="auto, (max-width: 787px) 100vw, 787px"
                     title="Alba Exteriors Logo"
-                    className="text-sm box-border caret-transparent h-auto break-words object-contain max-h-16 max-w-[220px] md:text-[17px] md:max-h-[200px] md:max-w-[500px]"
+                    className="text-sm box-border caret-transparent h-16 w-auto break-words object-contain md:text-[17px] md:h-auto md:max-h-[200px] md:max-w-[500px]"
                   />
                 </a>
               </div>
