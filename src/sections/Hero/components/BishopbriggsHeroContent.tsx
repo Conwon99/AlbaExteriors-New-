@@ -39,7 +39,7 @@ export const BishopbriggsHeroContent = () => {
                     title="Get A Free Quote"
                     role="button"
                     aria-label="Get A Free Quote"
-                    className="button-shine relative text-white text-lg font-bold box-border caret-transparent inline-flex items-center justify-center tracking-wide leading-normal text-center align-middle bg-[#17539B] hover:bg-[#134080] hover:shadow-xl hover:scale-105 active:scale-100 transition-all duration-300 px-7 py-4 rounded-md shadow-lg whitespace-nowrap md:px-8 md:py-5 md:text-xl"
+                    className="button-shine relative text-white text-lg font-bold box-border caret-transparent inline-flex items-center justify-center tracking-wide leading-normal text-center align-middle bg-[#8dae23] hover:bg-[#7a9a1f] hover:shadow-xl hover:scale-105 active:scale-100 transition-all duration-300 px-7 py-4 rounded-md shadow-lg whitespace-nowrap md:px-8 md:py-5 md:text-xl"
                     onClick={() => {
                       if (typeof window !== 'undefined' && window.gtag) {
                         window.gtag('event', 'quoteButton_hero', {
