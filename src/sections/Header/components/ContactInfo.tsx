@@ -5,7 +5,7 @@ import { MobilePhoneButton } from "@/sections/Header/components/MobilePhoneButto
 
 export const ContactInfo = () => {
   return (
-    <div className="text-sm box-border caret-transparent clear-both flex flex-none float-none leading-[20.3px] min-h-px min-w-0 break-words w-auto mx-0 md:text-[17px] md:clear-none md:float-left md:leading-[24.65px] md:min-w-[auto] md:w-[70%] md:mx-0 md:grow">
+    <div className="text-sm box-border caret-transparent clear-both flex grow float-none leading-[20.3px] min-h-px min-w-0 break-words w-auto mx-0 md:text-[17px] md:clear-none md:float-left md:leading-[24.65px] md:min-w-[auto] md:w-[70%] md:mx-0">
       <div className="text-sm box-border caret-transparent flex flex-col grow justify-center leading-[20.3px] max-w-full min-w-px break-words w-full md:text-[17px] md:leading-[24.65px]">
         {/* Mobile: phone icon + hamburger, right-aligned */}
         <div className="flex items-center justify-end gap-3 md:hidden">
