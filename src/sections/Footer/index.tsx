@@ -15,7 +15,7 @@ export const Footer = () => {
                   variant="who-we-are"
                   logoUrl="/alba-logo.png"
                   logoAlt="Alba Exteriors Logo"
-                  description="Alba Exteriors is a professional exterior cleaning company based in Paisley, serving Scotland. We are dedicated to customer satisfaction and reliability, specializing in pressure washing and softwashing services. Our services include pressure washing for driveways, patios, and hard surfaces, as well as gentle softwashing for render, walls, and delicate surfaces to remove algae, moss, and grime without causing damage."
+                  description="Alba Exteriors is a professional exterior cleaning company based in Glasgow, serving Scotland. We are dedicated to customer satisfaction and reliability, specializing in pressure washing and softwashing services. Our services include pressure washing for driveways, patios, and hard surfaces, as well as gentle softwashing for render, walls, and delicate surfaces to remove algae, moss, and grime without causing damage."
                 />
                 <FooterColumn
                   title="Our Services"
@@ -39,7 +39,7 @@ export const Footer = () => {
                   emailLabel="Email Us:"
                   phone="07375 872331"
                   phoneLabel="Call Us:"
-                  address="Paisley, Scotland"
+                  address="Glasgow, G13 2HJ"
                   hoursTitle="Hours Of Operation"
                   hoursContent={
                     <>
