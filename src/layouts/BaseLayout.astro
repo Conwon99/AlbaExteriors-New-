@@ -11,7 +11,7 @@ interface Props {
   locationName?: string;
 }
 
-const { title, description = "Alba Exteriors - Professional exterior cleaning services in Paisley, Glasgow, Edinburgh, Central Belt, Highlands, and Argyll and Bute, Scotland. Roof cleaning, pressure washing, soft washing, and more. Fully insured, expert service.", breadcrumbs, locationName } = Astro.props;
+const { title, description = "Alba Exteriors - Professional exterior cleaning in Glasgow and surrounding areas, including Bearsden, Milngavie, Clydebank, Paisley and Renfrew. Roof cleaning, pressure washing, soft washing, and more. Fully insured, expert service.", breadcrumbs, locationName } = Astro.props;
 
 // Generate canonical URL (non-www)
 const canonicalUrl = new URL(Astro.url.pathname, "https://albaexteriors.co.uk");
@@ -91,36 +91,38 @@ const schema = {
     "worstRating": "1"
   },
   "areaServed": [
-    { "@type": "City", "name": "Paisley" },
-    { "@type": "City", "name": "East Kilbride" },
-    { "@type": "City", "name": "Hamilton" },
-    { "@type": "City", "name": "Newton Mearns" },
-    { "@type": "City", "name": "Bearsden" },
-    { "@type": "City", "name": "Livingston" },
+    {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 55.9040665, "longitude": -4.3435068 },
+      "geoRadius": 20000
+    },
     { "@type": "City", "name": "Glasgow" },
-    { "@type": "City", "name": "Edinburgh" },
-    { "@type": "City", "name": "Cumbernauld" },
-    { "@type": "City", "name": "Airdrie" },
-    { "@type": "City", "name": "Motherwell" },
-    { "@type": "City", "name": "Coatbridge" },
-    { "@type": "City", "name": "Bishopbriggs" },
+    { "@type": "City", "name": "Bearsden" },
+    { "@type": "City", "name": "Milngavie" },
+    { "@type": "City", "name": "Clydebank" },
+    { "@type": "City", "name": "Paisley" },
     { "@type": "City", "name": "Renfrew" },
+    { "@type": "City", "name": "Erskine" },
+    { "@type": "City", "name": "Bishopbriggs" },
+    { "@type": "City", "name": "Kirkintilloch" },
+    { "@type": "City", "name": "Lenzie" },
+    { "@type": "City", "name": "Dumbarton" },
+    { "@type": "City", "name": "Alexandria" },
+    { "@type": "City", "name": "Balloch" },
     { "@type": "City", "name": "Johnstone" },
-    { "@type": "City", "name": "Kilmarnock" },
-    { "@type": "City", "name": "Irvine" },
-    { "@type": "City", "name": "Kilwinning" },
-    { "@type": "City", "name": "Saltcoats" },
-    { "@type": "City", "name": "Ardrossan" },
-    { "@type": "City", "name": "Stevenston" },
-    { "@type": "City", "name": "Bathgate" },
-    { "@type": "City", "name": "Falkirk" },
-    { "@type": "City", "name": "Grangemouth" },
-    { "@type": "City", "name": "Musselburgh" },
-    { "@type": "City", "name": "Dalkeith" },
-    { "@type": "City", "name": "Bonnyrigg" },
-    { "@type": "Place", "name": "Central Belt" },
-    { "@type": "Place", "name": "Highlands" },
-    { "@type": "Place", "name": "Argyll and Bute" }
+    { "@type": "City", "name": "Linwood" },
+    { "@type": "City", "name": "Barrhead" },
+    { "@type": "City", "name": "Giffnock" },
+    { "@type": "City", "name": "Newton Mearns" },
+    { "@type": "City", "name": "Clarkston" },
+    { "@type": "City", "name": "Rutherglen" },
+    { "@type": "City", "name": "Cambuslang" },
+    { "@type": "City", "name": "Stepps" },
+    { "@type": "City", "name": "Uddingston" },
+    { "@type": "City", "name": "Blantyre" },
+    { "@type": "City", "name": "East Kilbride" },
+    { "@type": "City", "name": "Kilsyth" },
+    { "@type": "City", "name": "Strathblane" }
   ],
   "serviceType": [
     "Roof Cleaning",

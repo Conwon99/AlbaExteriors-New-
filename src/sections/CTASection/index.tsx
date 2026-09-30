@@ -16,7 +16,7 @@ export const CTASection = () => {
             <div className="relative text-white text-lg box-border caret-transparent leading-7 text-center w-full font-figtree md:text-xl md:leading-8">
               <div className="text-lg box-border caret-transparent leading-7 md:text-xl md:leading-8">
                 <p className="text-lg box-border caret-transparent leading-7 mb-4 md:text-xl md:leading-8">
-                  Ready to transform your property's exterior? Contact Alba Exteriors today for professional exterior cleaning services across Scotland. We offer free, no-obligation quotes and guarantee exceptional results on every job.
+                  Ready to transform your property's exterior? Contact Alba Exteriors today for professional exterior cleaning services across Glasgow. We offer free, no-obligation quotes and guarantee exceptional results on every job.
                 </p>
                 <p className="text-lg box-border caret-transparent leading-7 md:text-xl md:leading-8">
                   Don't wait - let us help you restore your property to its original beauty. Get in touch now!

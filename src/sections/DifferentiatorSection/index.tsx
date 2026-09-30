@@ -18,7 +18,7 @@ export const DifferentiatorSection = () => {
                 <div className="relative box-border caret-transparent flex flex-col w-full md:w-1/2">
                   <div className="relative box-border caret-transparent text-left w-full mb-6">
                     <h2 className="text-neutral-900 text-2xl font-bold not-italic box-border caret-transparent leading-8 font-thiccboi md:text-4xl md:leading-10">
-                      <span className="text-[#17539B] underline">What Makes Us Different</span> From Other Exterior Cleaning Companies Across Scotland?
+                      <span className="text-[#17539B] underline">What Makes Us Different</span> From Other Exterior Cleaning Companies Across Glasgow?
                     </h2>
                   </div>
                   <div className="relative box-border caret-transparent text-left w-full font-figtree">

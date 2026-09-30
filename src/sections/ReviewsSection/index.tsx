@@ -24,7 +24,7 @@ export const ReviewsSection = () => {
             <div className="relative box-border caret-transparent text-center w-full mb-6">
               <div className="box-border caret-transparent">
                 <h3 className="text-white text-3xl font-bold not-italic box-border caret-transparent leading-9 font-thiccboi md:text-4xl md:leading-10">
-                  Exterior Cleaning Services Across Scotland
+                  Exterior Cleaning Services Across Glasgow
                 </h3>
               </div>
             </div>

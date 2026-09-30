@@ -14,13 +14,13 @@ export const ServiceCard = () => {
                       Alba Exteriors
                     </h5>
                     <h3 className="text-neutral-900 text-[25px] not-italic font-bold box-border caret-transparent clear-both leading-[35px] break-words uppercase mt-[5px] mb-[15px] font-thiccboi md:text-3xl md:leading-[42px]">
-                      Pressure Washing & Softwashing Specialist Serving Scotland
+                      Pressure Washing & Softwashing Specialist Serving Glasgow
                     </h3>
                   </div>
                   <div className="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
                     <div className="text-sm box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
                       <p className="text-sm box-border caret-transparent leading-[20.3px] break-words mb-2.5 pb-2.5 md:text-[17px] md:leading-[24.65px]">
-                        Alba Exteriors is a professional exterior cleaning company serving across Scotland. We are dedicated to customer satisfaction and reliability, specializing in pressure washing and softwashing services. Our services include pressure washing for driveways, patios, and hard surfaces, as well as gentle softwashing for render, walls, and delicate surfaces to remove algae, moss, and grime without causing damage.
+                        Alba Exteriors is a professional exterior cleaning company serving Glasgow and the surrounding areas. We are dedicated to customer satisfaction and reliability, specializing in pressure washing and softwashing services. Our services include pressure washing for driveways, patios, and hard surfaces, as well as gentle softwashing for render, walls, and delicate surfaces to remove algae, moss, and grime without causing damage.
                       </p>
                       <p className="text-sm box-border caret-transparent leading-[20.3px] break-words pb-2.5 md:text-[17px] md:leading-[24.65px]">
                         <strong className="text-sm font-bold box-border caret-transparent leading-[20.3px] break-words md:text-[17px] md:leading-[24.65px]">
