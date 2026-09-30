@@ -46,16 +46,6 @@ export const DesktopMenu = () => {
         </li>
         <li className="relative text-base box-border caret-transparent list-item leading-[23.2px] break-words mx-0 my-[5px] md:mx-[15px] md:my-0">
           <a
-            href="/locations"
-            className="text-cyan-600 font-semibold box-border caret-transparent block tracking-[1px] leading-4 break-words uppercase py-[5px] hover:text-sky-300 transition-colors"
-          >
-            <span className="text-white box-border caret-transparent break-words w-full">
-              Locations
-            </span>
-          </a>
-        </li>
-        <li className="relative text-base box-border caret-transparent list-item leading-[23.2px] break-words mx-0 my-[5px] md:mx-[15px] md:my-0">
-          <a
             href="/contact"
             className="text-cyan-600 font-semibold box-border caret-transparent block tracking-[1px] leading-4 break-words uppercase py-[5px] hover:text-sky-300 transition-colors"
           >
