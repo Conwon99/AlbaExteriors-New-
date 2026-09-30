@@ -39,6 +39,14 @@ export const SecondaryNav = () => {
               Pressure Washing
             </a>
           </li>
+          <li>
+            <a
+              href="/locations"
+              className="text-white font-semibold text-sm tracking-wide uppercase py-2 px-6 hover:bg-[#17539B]/80 transition-colors block border-r border-[#17539B]/60"
+            >
+              Locations
+            </a>
+          </li>
           <li 
             className="relative group"
             onMouseEnter={() => setIsServicesOpen(true)}
